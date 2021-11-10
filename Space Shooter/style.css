@@ -57,3 +57,9 @@
     font-size: 10em;
     color: white;
   }
+  @media screen and (max-width: 500px){
+    #board{
+      height: 350px;
+      width: 350px;
+    }
+  }

@@ -1,3 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gainsboro;
+}
+.container{
+    display: inline-flex;
+}
+.heading{
+    text-align: center;
+    background-color: rgb(198, 193, 193);
+}
 .square{
     width: 200px;
     height: 200px;
@@ -5,6 +20,7 @@
     border-color: black;
 }
 .grid{
+    margin-top: 30px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
