@@ -4,10 +4,18 @@ let gameover = new Audio("gameover.mp3");
 let turn = "X";
 let isGameOver = false;
 //function to check the turn
+/**
+ * Change the turn from X to O or vice versa
+ * @returns The turn variable is being set to the value of the changeTurn function.
+ */
 const changeTurn = () => {
   return turn === "X" ? "0" : "X";
 };
 //function to check for a win
+/**
+ * Check if any of the win conditions are met. If they are, set the game over variable to the current
+ * turn, and play the gameover sound
+ */
 const checkWin = () => {
   let boxtext = document.getElementsByClassName("boxtext");
   let wins = [
@@ -36,6 +44,20 @@ const checkWin = () => {
 };
 
 //game logic
+/* The forEach() method calls a provided function once for each array element.
+
+The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable
+object.
+
+The addEventListener() method attaches an event handler to the specified element.
+
+The querySelector() method returns the first element that matches a specified CSS selector(s) in the
+document.
+
+The innerText property returns the text content of the specified node, and sets the text content of
+the specified node.
+
+The changeTurn() method changes the turn */
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach((element) => {
   let boxtext = element.querySelector(".boxtext");
@@ -53,6 +75,19 @@ Array.from(boxes).forEach((element) => {
   });
 });
 // add onclick listener to reset button
+
+/* The reset button is used to reset the game.
+
+The turn variable is used to keep track of whose turn it is.
+
+The isGameOver variable is used to keep track of whether the game is over or not.
+
+The document.getElementsByClassName("info")[0].innerText is used to display whose turn it is.
+
+The document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width is used to display
+the X or O image.
+
+The Array */
 reset.addEventListener('click',()=>{
     let boxtexts=document.querySelectorAll('.boxtext');
     Array.from(boxtexts).forEach(element=>{
